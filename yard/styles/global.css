@@ -1,0 +1,471 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* inputs in login page */
+input:-webkit-autofill {
+    -webkit-background-clip: text;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+select:-webkit-autofill,
+select:-webkit-autofill:hover {
+  -webkit-text-fill-color: rgb(156 163 175);
+  color: rgb(156 163 175);
+}
+
+input:-webkit-autofill:focus,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: rgb(55 65 81);
+  color: rgb(55 65 81);
+  -webkit-box-shadow: 0 0 0 0.1px #227f4b;
+}
+
+
+h2 {
+  font-size: 1.25rem;
+  margin-bottom: 1em;
+}
+
+.index-msg {
+  font-family: 'Inter', sans-serif;
+}
+
+.myContainer {
+  width: 100%;
+  height: 500px; /* or whatever height you want */
+  /*background: linear-gradient(110deg, white 50%, transparent 50%);*/
+  position: relative;
+  overflow: hidden;
+  background-image: url("/wp1878516-buenos-aires-wallpapers.jpg");
+  background-size: cover;
+}
+
+@keyframes lightningLine {
+  0% {
+    top: -125%; /* start from outside the container */
+    left: 50%;
+  }
+  100% {
+    top: -32%; /* adjust to position it perfectly on the division */
+    left: 50%;
+  }
+}
+
+.white-section {
+  width: 100%;
+  height: 100%;
+  /*background: linear-gradient(-45deg, white 50%, transparent 50%);*/
+  background: white;
+  position: absolute;
+  top: 0;
+  left: 0; /* initially hidden outside the container */
+  transform: skewX(90deg);
+  transition: transform 0.5s;
+  overflow: hidden;
+}
+
+.myContainer.animate .white-section {
+  transform: skewX(100deg);
+}
+
+.whiteContent {
+  font-family: 'Inter', sans-serif;
+  color: black;
+
+  position: absolute;
+  transform: skewX(-90deg);
+  width: 50%;
+  height: 100%;
+}
+
+.myContainer.animate .whiteContent {
+  top:50%;
+  left: 80%;
+  transform: skewX(80deg);
+}
+
+.text-content {
+  position: absolute;
+  left: 0;
+  top: 50%; /* centers the text */
+  transform: translateY(-50%);
+  padding: 20px;
+  color: black;
+}
+
+.myAwesomeClass {
+  /*position: absolute;*/
+  z-index: 99;
+  background: white;
+  width: 100%;
+  transition-property: height;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 1000ms;
+}
+
+.myAwesomeClass2 {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 1000ms;
+}
+
+.landingInterested {
+  background-image: url("/wp1878511-buenos-aires-wallpapers.jpg");
+}
+
+/*
+ *
+ * common zone
+ *
+ */
+.landingScreen {
+  min-height: 600px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-size: cover;
+}
+
+.landingScreen h1, .landingScreen h2 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 800;
+  font-size: 53px;
+  line-height: 60px;
+  color: white;
+  margin-bottom: 30px;
+}
+
+.landingScreen p {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  color: white;
+  font-size: 20px;
+  line-height: 25px;
+}
+
+.landingScreen p span {
+  font-weight: 700;
+}
+
+.landingScreen h1 span, .landingScreen h2 span {
+  color: #18bbe0;
+}
+
+.landingScreen.textRight h1, .landingScreen.textRight h2, .landingScreen.textRight p {
+  text-align: right;
+}
+
+.landingScreen.textTop {
+  justify-content: start;
+  padding-top:140px;
+}
+
+@media screen and (max-width: 744px) {
+  .landingScreen h1, .landingScreen h2, .landingScreen.textRight h1, .landingScreen.textRight h2 {
+    font-size: 33px;
+    line-height: 40px;
+    text-align: center;
+    padding: 0 30px;
+  }
+
+  .landingScreen.textTop {
+    padding-top:100px;
+  }
+
+  .landingScreen > p, .landingScreen.textRight > p {
+    font-size: 18px;
+    text-align: center;
+    padding: 0 30px;
+  }
+
+  .landingScreen {
+    justify-content: start;
+    padding-top: 100px;
+    background-position: right bottom;
+    background-size: 711px 400px;
+    background-repeat: no-repeat;
+    background-color: black;
+  }
+
+  .landingScreen2 {
+    background-position: right bottom;
+    background-size: 711px 400px;
+    background-repeat: no-repeat;
+    background-color: black;
+  }
+
+  .landingScreen3 {
+    background-position: -259px 195px;
+    background-size: 1200px 675px;
+    background-repeat: no-repeat;
+    background-color: black;
+  }
+
+  .landingScreen4 {
+    background-position: -259px 195px;
+    background-size: 1200px 675px;
+    background-repeat: no-repeat;
+    background-color: white;
+  }
+
+  .landingScreen6 .chat {
+    padding: 0 40px;
+  }
+}
+
+/* end common zone */
+
+.landingScreen1 {
+  background-image: url("/landing/1.jpg");
+  background-position: bottom;
+}
+
+@media screen and (max-width: 744px) {
+  .landingScreen1 {
+    justify-content: center;
+    background-position: center top;
+  }
+}
+
+.landingScreen1 p, .landingScreen1 h1 {
+  text-align: center;
+}
+
+.landingScreen2 {
+  background-image: url("/landing/3.jpg");
+}
+
+.landingScreen3 {
+  background-image: url("/landing/4.jpg");
+}
+
+.landingScreen4 {
+  background-image: url("/landing/5.jpg");
+}
+
+.landingScreen4 h2, .landingScreen4 p {
+  color: #333;
+}
+
+.landingScreen5 {
+  background-image: url("/landing/6.jpg");
+}
+
+.landingScreen6 {
+  background-image: url("/landing/7.jpg");
+  background-color: #fdfdfd;
+  background-repeat: no-repeat;
+  padding-top: 50px;
+  justify-content: start;
+  align-items: center;
+}
+
+.landingScreen6 h2 {
+  color: #333;
+  text-align: center;
+}
+
+.landingScreen6 .chat {
+  position: relative;
+}
+
+.landingScreen6 .chat .identityPopup {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(247, 247, 247, 0.97);
+  z-index: 99;
+}
+
+.landingScreen6 .chat .identityPopup form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.landingScreen6 .chat .identityPopup p {
+  color: #333;
+  padding: 20px;
+  font-size: 18px;
+}
+
+.landingScreen6 .chat .messages {
+  overflow: hidden;
+  height: 120px;
+  transition: height 0.3s ease-in-out;
+}
+
+.landingScreen6 .chat .messages.expanded {
+  height: 200px;
+}
+
+.landingScreen6 .chat .messages.fullExpanded {
+  height: 310px;
+}
+
+.landingScreen6 .chat .messages div {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.landingScreen6 .chat .messages div img {
+  position: absolute;
+  bottom: 0;
+}
+
+.landingScreen6 .chat .messages .response {
+  margin-top: 15px;
+}
+
+.landingScreen6 .chat .messages .response img {
+  right: 0;
+}
+
+.landingScreen6 .chat .messages p {
+  background: #333;
+  padding: 11px 16px 11px 32px;
+  margin-right: 110px;
+  border-radius: 30px;
+  margin-bottom: 10px;
+  font-size: 17px;
+}
+
+@media screen and (max-width: 744px) {
+  .landingScreen6 .chat .messages p {
+    font-size: 15px;
+  }
+
+  .landingScreen6 .chat .messages {
+    height: 212px;
+  }
+
+  .landingScreen6 .chat .messages.expanded {
+    height: 289px;
+  }
+
+  .landingScreen6 .chat .messages.fullExpanded {
+    height: 435px;
+  }
+}
+
+.landingScreen6 .chat .messages .response p {
+  background-color: #18bbe0;
+  margin-right: 0;
+  margin-left: 110px;
+}
+
+.landingScreen6 .chat .controls {
+  display: flex;
+  flex-direction: row;
+  height: 40px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #999;
+  /*background-color: ;*/
+}
+
+.landingScreen6 .chat .controls input {
+  display: block;
+  padding: 5px;
+  flex: 1;
+  background: transparent;
+  color: #999;
+  margin-right: 10px;
+}
+
+.landingScreen6 .chat .controls input:focus,
+  .landingScreen6 .chat .controls input:focus-visible,
+  .landingScreen6 .chat .controls input:hover {
+  outline: none;
+  color: #333;
+}
+
+.landingScreen6 .chat .controls button {
+  display: block;
+  height: 34px;
+  width: 34px;
+  background-color: #18bbe0;
+  border-radius: 17px;
+}
+.landingScreen6 .chat .controls button img {
+  height: 26px;
+  width: 26px;
+  margin-left: 6px;
+}
+
+.landingScreen6 .chat .controls button span {
+  color:white;
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  padding-top: 5px;
+  padding-left: 5px;
+}
+
+/*
+ *
+ * HELP SECTION
+ *
+ */
+
+.helpTextSection h1 {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  margin-bottom: 1rem;
+}
+
+.helpTextSection h2 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.helpTextSection h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 17px;
+}
+
+.helpTextSection p {
+  font-size: 14px;
+}
+
+.helpTextSection ol, .helpTextSection ul {
+  font-size: 14px;
+  margin-left: 35px;
+}
+
+.helpTextSection ol {
+  list-style-type: decimal;
+}
+
+.helpTextSection ul {
+  list-style-type: disc;
+}
+
+@media screen and (max-width: 744px) {
+
+  .landingScreen1 {
+    background-image: url("/landing/Bg-ima-mobile-1.jpg");
+    background-size: contain;
+  }
+
+  .landingScreen4 {
+    background-image: url("/landing/Bg-ima-mobile-5.jpg");
+    background-size: 960px 708px;
+    background-position: -430px -40px;
+  }
+
+  .landingScreen4 {
+    justify-content: end;
+    padding-bottom: 140px;
+  }
+
+  .landingScreen5 {
+    background-image: url("/landing/Bg-ima-mobile-6.jpg");
+    background-size: 960px 708px;
+    background-position: -305px 150px;
+  }
+}
