@@ -1,9 +1,0 @@
-[submodule "backyard"]
-	path = backyard
-	url = https://github.com/hospedate/backyard.git
-[submodule "yard"]
-	path = yard
-	url = https://github.com/hospedate/yard.git
-[submodule "basement"]
-	path = basement
-	url = https://github.com/hospedate/basement.git
